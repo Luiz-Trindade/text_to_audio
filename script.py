@@ -1,8 +1,25 @@
-# Simple Text To Audio Program Written In Python.
-# That Program Uses Multiprocessing!
-# Created By; Luiz Gabriel Magalhães Trindade.
-# Distributed Under The GPL3 License.
-# GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
+'''
+    Simple Text To Audio Program Written In Python.
+    That Program Uses Multiprocessing!
+    Created By; Luiz Gabriel Magalhães Trindade.
+    Distributed Under The GPL3 License.
+    GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
+
+    Copyright (C) 2024  Luiz Gabriel Magalhães Trindade.
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+'''
 
 from multiprocessing import Process
 from gtts import gTTS
@@ -13,7 +30,7 @@ from os import remove
 
 parts = 4
 language = "pt-br"
-speed = 1.25
+speed = 1.2
 
 start = time()
 
@@ -29,7 +46,7 @@ def JoinAudios():
     audio4 = AudioSegment.from_file("file4.mp3")
     merged_audio = audio1 + audio2 + audio3 + audio4
     merged_audio_speedup = merged_audio.speedup(playback_speed=speed)
-    merged_audio_speedup.export("FINAL_AUDIO.mp3", format="mp3")
+    merged_audio_speedup.export(f"{file_name}.mp3", format="mp3")
     try:
         remove("file1.mp3")
         remove("file2.mp3")
