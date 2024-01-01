@@ -1,8 +1,6 @@
 '''
     Simple Text To Audio Program Written In Python.
     That Program Uses Multiprocessing!
-    Created By; Luiz Gabriel Magalhães Trindade.
-    Distributed Under The GPL3 License.
     GPL3 License: https://www.gnu.org/licenses/gpl-3.0.en.html#license-text
 
     Copyright (C) 2024  Luiz Gabriel Magalhães Trindade.
